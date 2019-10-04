@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>listener</title>
+	<style type="text/css">
+		body  {
+			height: 500px;
+			border: 1px solid black	;
+		}
+		div {
+			height: 200px;
+			width: 200px;
+			background-color: red;
+		}
+	</style>
+
+	<script type="text/javascript">
+		window.onload = function() {
+			//activar un listener sobre todo el documento
+			document.getElementById('caja').addEventListener('click', function () {
+				saludar('hola')
+			});
+		}		
+				
+		function saludar(texto) {
+			alert(texto);
+			//desactivar el evento
+			document.getElementById('caja').removeEventListener('click', desactiva());
+		}
+
+
+
+	</script>
+</head>
+<body>
+		<div id="caja"></div>
+
+</body>
+</html>
